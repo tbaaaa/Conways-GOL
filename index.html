@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conway's Game of Life</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Conway's Game of Life</h1>
+    </header>
+
+    <section class="controls">
+      <button id="startStop">Start</button>
+      <button id="step">Step</button>
+      <button id="randomize">Randomize</button>
+      <button id="clear">Clear</button>
+
+      <label>Speed: <input id="speed" type="range" min="1" max="30" value="8"></label>
+      <label>Rows: <input id="rows" type="number" min="10" max="200" value="50"></label>
+      <label>Cols: <input id="cols" type="number" min="10" max="200" value="50"></label>
+      <button id="resizeGrid">Resize</button>
+      <label>Gridlines: <input id="gridlinesToggle" type="checkbox" checked></label>
+      <label>Preset:
+        <select id="presetSelect">
+          <option value="">— choose —</option>
+          <option>Glider</option>
+          <option>Lightweight spaceship</option>
+          <option>Pulsar</option>
+          <option>Gosper glider gun</option>
+        </select>
+      </label>
+      <button id="applyPreset">Apply</button>
+    </section>
+
+    <main>
+      <canvas id="board"></canvas>
+    </main>
+
+    <footer>
+      <small>Click cells to toggle. Toroidal (wrap-around) neighbors. This project was generated entirely by GPT-5 mini.</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
